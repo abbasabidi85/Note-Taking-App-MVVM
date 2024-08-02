@@ -1,11 +1,11 @@
-package com.abs.notely;
+package com.abs.notely.View;
 
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.abs.notely.Database.NotesDatabase;
+import com.abs.notely.R;
 
 public class MainActivity extends AppCompatActivity {
 

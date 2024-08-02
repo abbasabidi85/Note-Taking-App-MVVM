@@ -13,7 +13,7 @@ import java.util.List;
 @Dao
 public interface NotesDAO {
 
-    @Query("SELECT* FROM notesDatabase" )
+    @Query("SELECT* FROM notesDatabase ORDER BY id DESC" )
     LiveData<List<Notes>> getAllNotes();
 
     @Insert

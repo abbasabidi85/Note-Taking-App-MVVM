@@ -1,6 +1,7 @@
 package com.abs.notely.Database;
 
 import android.content.Context;
+import android.os.AsyncTask;
 
 import androidx.room.Database;
 import androidx.room.Room;
@@ -8,6 +9,8 @@ import androidx.room.RoomDatabase;
 
 import com.abs.notely.Dao.NotesDAO;
 import com.abs.notely.Model.Notes;
+
+import org.jetbrains.annotations.Async;
 
 @Database(entities = {Notes.class},version = 1, exportSchema = false)
 public abstract class NotesDatabase extends RoomDatabase {
@@ -24,7 +27,7 @@ public abstract class NotesDatabase extends RoomDatabase {
                                 context.getApplicationContext(),
                                 NotesDatabase.class,
                                 "notesDatabase")
-                        .build();
+                        .allowMainThreadQueries().build();
             }
 
         }
