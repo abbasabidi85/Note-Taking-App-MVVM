@@ -1,0 +1,57 @@
+plugins {
+    alias(libs.plugins.android.application)
+    id 'com.google.devtools.ksp'
+
+}
+
+android {
+    namespace 'com.abs.notely'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.abs.notely"
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+
+    }
+}
+
+dependencies {
+
+    implementation libs.appcompat
+    implementation libs.material
+    implementation libs.activity
+    implementation libs.constraintlayout
+    testImplementation libs.junit
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
+
+    //room database
+    def room_version = "2.6.1"
+
+    implementation libs.room.runtime
+    annotationProcessor "androidx.room:room-compiler:$room_version"
+    // To use Kotlin Symbol Processing (KSP)
+    ksp "androidx.room:room-compiler:$room_version"
+
+
+    //architectural components
+    implementation "androidx.lifecycle:lifecycle-livedata:2.8.4"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-android:2.8.4"
+    implementation "android.arch.lifecycle:extensions:1.1.1"
+}
