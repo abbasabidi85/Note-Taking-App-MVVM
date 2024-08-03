@@ -75,10 +75,6 @@ public class EditNoteFragment extends Fragment {
         binding.editNoteContent.append(content);
         binding.editNoteDateTime.setText(date);
 
-        binding.editNoteContent.requestFocus();
-        InputMethodManager imm = (InputMethodManager) requireActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
-        imm.showSoftInput(binding.editNoteContent, InputMethodManager.SHOW_IMPLICIT);
-
         OnBackPressedCallback callback = new OnBackPressedCallback(true) {
             @Override
             public void handleOnBackPressed() {
