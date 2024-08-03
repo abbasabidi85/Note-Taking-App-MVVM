@@ -13,17 +13,18 @@
         <action
             android:id="@+id/action_homeFragment_to_editNotes"
             app:destination="@id/editNotes"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_right"
-            app:popEnterAnim="@anim/slide_in_right"
-            app:popExitAnim="@anim/slide_out_right"/>
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popExitAnim="@anim/slide_out"
+            app:popEnterAnim="@anim/fade_in"
+            />
         <action
             android:id="@+id/action_homeFragment_to_addNoteFragment"
             app:destination="@id/addNoteFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_right"
-            app:popEnterAnim="@anim/slide_in_right"
-            app:popExitAnim="@anim/slide_out_right" />
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popExitAnim="@anim/slide_out"
+            app:popEnterAnim="@anim/fade_in" />
     </fragment>
     <fragment
         android:id="@+id/editNotes"
@@ -33,10 +34,10 @@
         <action
             android:id="@+id/action_editNotes_to_homeFragment"
             app:destination="@id/homeFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_right"
-            app:popEnterAnim="@anim/slide_in_right"
-            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/slide_out"
+            app:popEnterAnim="@anim/slide_in"
+            app:popExitAnim="@anim/fade_out"
             app:popUpTo="@id/homeFragment"
             app:popUpToInclusive="true"/>
     </fragment>
