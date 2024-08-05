@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelProviders;
 
+import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -60,6 +61,9 @@ public class AddNoteFragment extends Fragment {
         binding.addNoteContent.requestFocus();
         InputMethodManager imm = (InputMethodManager) requireActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
         imm.showSoftInput(binding.addNoteContent, InputMethodManager.SHOW_IMPLICIT);
+
+        binding.addNoteTitle.setMovementMethod(LinkMovementMethod.getInstance());
+        binding.addNoteContent.setMovementMethod(LinkMovementMethod.getInstance());
 
         OnBackPressedCallback callback = new OnBackPressedCallback(true) {
             @Override

@@ -15,6 +15,7 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.navigation.Navigation;
 
+import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -74,6 +75,9 @@ public class EditNoteFragment extends Fragment {
         binding.editNoteTitle.append(title);
         binding.editNoteContent.append(content);
         binding.editNoteDateTime.setText(date);
+
+        binding.editNoteTitle.setMovementMethod(LinkMovementMethod.getInstance());
+        binding.editNoteContent.setMovementMethod(LinkMovementMethod.getInstance());
 
         OnBackPressedCallback callback = new OnBackPressedCallback(true) {
             @Override
