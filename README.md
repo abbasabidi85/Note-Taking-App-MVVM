@@ -1,18 +1,19 @@
 <h1>Notely</h1>
-Notely is a modern notes app designed with a focus on simplicity and functionality. Built using Java and MVVM architecture, Notely ensures a clean separation of concerns, making the codebase more maintainable and scalable. The app leverages Room Database for local storage, Navigation Components for seamless navigation, Material You for a delightful user interface, and View Binding for safe and efficient view access.
+Notely is a modern notes app designed with a focus on simplicity and functionality. Built using Java and MVVM architecture, Notely ensures a clean separation of concerns, making the codebase more maintainable and scalable. The app leverages Room Database for local storage, Full Text Search (FTS4) for searching the notes in the room database, Navigation Components for seamless navigation, Material You for a delightful user interface, and View Binding for safe and efficient view access.
 
 <h3>Features</h3>
 <ul>
   <li><b>MVVM Architecture:</b> Ensures separation of concerns and a clean codebase.</li>
   <li><b>Room Database:</b> Provides robust local data storage.</li>
+  <li><b>Full Text Search (FTS4):</b> Full text search for searching the notes in the room database </li>
   <li><b>Navigation Components:</b> Facilitates easy and consistent navigation within the app.</li>
   <li><b>Material You:</b> Brings a modern, dynamic, and personalized user interface.</li>
   <li><b>View Binding:</b> Offers type-safe access to views, reducing the risk of runtime errors.</li>
 </ul>
 
 <h3>Screenshots<h3>
-<img src="https://github.com/user-attachments/assets/81dfcb28-58ed-4a61-b693-c859bd0a05c3"/>
-  
+<img src="https://github.com/user-attachments/assets/12f77443-dac3-40f9-a398-7ecb9768c184"/>
+
 <h3>Usage</h3>
 <b>Creating a New Note:</b>
 
@@ -34,6 +35,13 @@ Notely is a modern notes app designed with a focus on simplicity and functionali
 <ul>
   <li>Open a note and tap on the note title or content</li>
   <li>Make your changes and press Save.</li>
+</ul>
+
+<b>Searching Notes:</b>
+
+<ul>
+  <li>Tap on search bar and enter the keyword you want to search</li>
+  <li>Select desired result</li>
 </ul>
 
 <b>Deleting Notes:</b>
