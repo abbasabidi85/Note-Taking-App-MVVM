@@ -10,6 +10,9 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelProviders;
@@ -56,7 +59,7 @@ public class EditNoteFragment extends Fragment {
 
         ((AppCompatActivity)getActivity()).setSupportActionBar(binding.editNoteToolbar);
         ((AppCompatActivity)getActivity()).getSupportActionBar().setDisplayShowTitleEnabled(false);
-
+        
         binding.editNoteToolbar.setNavigationIcon(R.drawable.ic_arrow_back);
         binding.editNoteToolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
