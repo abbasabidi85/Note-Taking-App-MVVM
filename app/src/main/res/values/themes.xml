@@ -16,5 +16,14 @@
         <item name="android:windowLightStatusBar">true</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+
     </style>
+    <style name="Widget.Material3.SearchView" parent="android:Widget">
+        <item name="backgroundTint">@macro/m3_comp_search_view_container_color</item>
+        <item name="enforceMaterialTheme">true</item>
+        <item name="android:textAppearance">@style/TextAppearance.Material3.SearchView</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.Material3.SearchView</item>
+        <item name="materialThemeOverlay">@style/ThemeOverlay.Material3.Search</item>
+    </style>
+
 </resources>

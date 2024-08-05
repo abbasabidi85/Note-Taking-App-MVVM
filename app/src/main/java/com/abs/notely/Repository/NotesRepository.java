@@ -7,6 +7,7 @@ import androidx.lifecycle.LiveData;
 import com.abs.notely.Dao.NotesDAO;
 import com.abs.notely.Database.NotesDatabase;
 import com.abs.notely.Model.Notes;
+import com.abs.notely.Model.NotesFTS;
 
 import java.util.List;
 
@@ -33,5 +34,8 @@ public class NotesRepository {
 
     public void updateNote(Notes notes){
         notesDAO.updateNotes(notes);
+    }
+    public LiveData<List<Notes>> searchNote(String query){
+        return notesDAO.searchNotes(query);
     }
 }

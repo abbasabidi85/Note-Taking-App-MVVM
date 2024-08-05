@@ -9,10 +9,11 @@ import androidx.room.RoomDatabase;
 
 import com.abs.notely.Dao.NotesDAO;
 import com.abs.notely.Model.Notes;
+import com.abs.notely.Model.NotesFTS;
 
 import org.jetbrains.annotations.Async;
 
-@Database(entities = {Notes.class},version = 1, exportSchema = false)
+@Database(entities = {Notes.class, NotesFTS.class},version = 2, exportSchema = false)
 public abstract class NotesDatabase extends RoomDatabase {
 
     public abstract NotesDAO notesDAO();
