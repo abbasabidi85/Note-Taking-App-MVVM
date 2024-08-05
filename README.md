@@ -12,7 +12,8 @@ Notely is a modern notes app designed with a focus on simplicity and functionali
 </ul>
 
 <h3>Screenshots<h3>
-<img src="https://github.com/user-attachments/assets/12f77443-dac3-40f9-a398-7ecb9768c184"/>
+<img src="https://github.com/user-attachments/assets/aed2de3c-04bb-4dec-a6c7-aaf3d5221cd6"/>
+
 
 <h3>Usage</h3>
 <b>Creating a New Note:</b>
