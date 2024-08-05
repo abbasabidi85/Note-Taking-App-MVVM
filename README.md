@@ -1,4 +1,4 @@
-<h1>Notely</h1>
+<h1>Notely- A note taking app</h1>
 Notely is a modern notes app designed with a focus on simplicity and functionality. Built using Java and MVVM architecture, Notely ensures a clean separation of concerns, making the codebase more maintainable and scalable. The app leverages Room Database for local storage, Full Text Search (FTS4) for searching the notes in the room database, Navigation Components for seamless navigation, Material You for a delightful user interface, and View Binding for safe and efficient view access.
 
 <h3>Features</h3>
