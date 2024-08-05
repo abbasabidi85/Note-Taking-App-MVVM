@@ -73,7 +73,7 @@ public class AddNoteFragment extends Fragment {
                 content=binding.addNoteContent.getText().toString();
                 date=getDate();
 
-                if (title.isEmpty() && content.isEmpty()){
+                if (title.isBlank() && content.isBlank()){
                     Snackbar.make(getView(),"Empty note discarded",Snackbar.LENGTH_SHORT).show();
                 }else{
                     int id=0;

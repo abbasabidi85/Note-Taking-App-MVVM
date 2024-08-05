@@ -59,7 +59,7 @@ public class EditNoteFragment extends Fragment {
 
         ((AppCompatActivity)getActivity()).setSupportActionBar(binding.editNoteToolbar);
         ((AppCompatActivity)getActivity()).getSupportActionBar().setDisplayShowTitleEnabled(false);
-        
+
         binding.editNoteToolbar.setNavigationIcon(R.drawable.ic_arrow_back);
         binding.editNoteToolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
@@ -90,7 +90,7 @@ public class EditNoteFragment extends Fragment {
                 updatedContent=binding.editNoteContent.getText().toString();
                 updatedDateTime=getDate();
 
-                if (updatedTitle.isEmpty() && updatedContent.isEmpty()){
+                if (updatedTitle.isBlank() && updatedContent.isBlank()){
                     Snackbar.make(getView(),"Empty note discarded",Snackbar.LENGTH_SHORT).show();
                 }else if(updatedTitle.equals(title) && updatedContent.equals(content)){
 
