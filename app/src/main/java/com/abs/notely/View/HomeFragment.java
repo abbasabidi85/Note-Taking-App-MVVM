@@ -75,6 +75,8 @@ public class HomeFragment extends Fragment implements NotesAdapter.OnNoteClickLi
             }
         });
 
+        notesViewModel= ViewModelProviders.of(this).get(NotesViewModel.class);
+
         setupRecyclerView();
         setupSearchResults();
         setupBackNavigation();
@@ -91,6 +93,7 @@ public class HomeFragment extends Fragment implements NotesAdapter.OnNoteClickLi
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
                 String query=binding.searchView.getText().toString();
                 notesViewModel.searchNotes(query).observe(getViewLifecycleOwner(), notes -> {
                     searchRecyclerView.setLayoutManager(new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL));
@@ -119,7 +122,6 @@ public class HomeFragment extends Fragment implements NotesAdapter.OnNoteClickLi
     }
 
     private void setupRecyclerView() {
-        notesViewModel= ViewModelProviders.of(this).get(NotesViewModel.class);
         recyclerView=binding.recyclerView;
         notesViewModel.getAllNotes.observe(getViewLifecycleOwner(), notes -> {
             staggeredGridLayoutManager=new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL);

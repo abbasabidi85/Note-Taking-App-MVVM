@@ -29,7 +29,7 @@ public interface NotesDAO {
     @Query("""
            SELECT * FROM notesDatabase
            JOIN notesDatabaseFTS ON notesDatabase.noteTitle == notesDatabaseFTS.noteTitle
-           WHERE notesDatabaseFTS MATCH :query""")
+           WHERE notesDatabaseFTS MATCH :query ORDER BY id DESC""")
     LiveData<List<Notes>> searchNotes(String query);
 
 }
