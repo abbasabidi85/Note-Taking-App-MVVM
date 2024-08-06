@@ -159,7 +159,6 @@ public class HomeFragment extends Fragment implements NotesAdapter.OnNoteClickLi
         });
     }
 
-
     @Override
     public void onResume() {
         super.onResume();
